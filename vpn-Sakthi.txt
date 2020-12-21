@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><!--Amazon Virtual Private Cloud Configuration
+
+To configure this VPN, go to the WebAdmin for your security gateway. Click "Site-to-site VPN",
+then click "Amazon VPC". On the "Setup" tab, locate the "Import via Amazon VPC configuration"
+section, then select this file and click "Apply".
+
+XSL Version: 2009-07-15-1119716--><vpn_connection id="vpn-0cb15218bdbf4291f">
+  <customer_gateway_id>cgw-0189987bdb2f1e435</customer_gateway_id>
+  <vpn_gateway_id>vgw-08f29bc49d63481df</vpn_gateway_id>
+  <vpn_connection_type>ipsec.1</vpn_connection_type>
+  <ipsec_tunnel>
+    <customer_gateway>
+      <tunnel_outside_address>
+        <ip_address>10.146.7.156</ip_address>
+      </tunnel_outside_address>
+      <tunnel_inside_address>
+        <ip_address>169.254.43.220</ip_address>
+        <network_mask>255.255.255.252</network_mask>
+        <network_cidr>30</network_cidr>
+      </tunnel_inside_address>
+      <bgp>
+        <asn>65000</asn>
+        <hold_time>30</hold_time>
+      </bgp>
+    </customer_gateway>
+    <vpn_gateway>
+      <tunnel_outside_address>
+        <ip_address>13.127.100.14</ip_address>
+      </tunnel_outside_address>
+      <tunnel_inside_address>
+        <ip_address>169.254.53.201</ip_address>
+        <network_mask>255.255.255.252</network_mask>
+        <network_cidr>30</network_cidr>
+      </tunnel_inside_address>
+      <bgp>
+        <asn>64512</asn>
+        <hold_time>30</hold_time>
+      </bgp>
+    </vpn_gateway>
+    <ike>
+      <version>ikev1</version>
+      <authentication_protocol>sha1</authentication_protocol>
+      <encryption_protocol>aes-128-cbc</encryption_protocol>
+      <lifetime>28800</lifetime>
+      <perfect_forward_secrecy>group2</perfect_forward_secrecy>
+      <mode>main</mode>
+      <pre_shared_key>mpXYKITYOdCNNT3Ir4zfMeQORzVT0IZX</pre_shared_key>
+    </ike>
+    <ipsec>
+      <protocol>esp</protocol>
+      <authentication_protocol>hmac-sha1-96</authentication_protocol>
+      <encryption_protocol>aes-128-cbc</encryption_protocol>
+      <lifetime>3600</lifetime>
+      <perfect_forward_secrecy>group2</perfect_forward_secrecy>
+      <mode>tunnel</mode>
+      <clear_df_bit>true</clear_df_bit>
+      <fragmentation_before_encryption>true</fragmentation_before_encryption>
+      <tcp_mss_adjustment>1379</tcp_mss_adjustment>
+      <dead_peer_detection>
+        <interval>10</interval>
+        <retries>3</retries>
+      </dead_peer_detection>
+    </ipsec>
+  </ipsec_tunnel>
+
+
+
+
+  <ipsec_tunnel>
+    <customer_gateway>
+      <tunnel_outside_address>
+        <ip_address>10.146.7.156</ip_address>
+      </tunnel_outside_address>
+      <tunnel_inside_address>
+        <ip_address>169.254.43.170</ip_address>
+        <network_mask>255.255.255.252</network_mask>
+        <network_cidr>30</network_cidr>
+      </tunnel_inside_address>
+      <bgp>
+        <asn>65000</asn>
+        <hold_time>30</hold_time>
+      </bgp>
+    </customer_gateway>
+    <vpn_gateway>
+      <tunnel_outside_address>
+        <ip_address>13.232.31.183</ip_address>
+      </tunnel_outside_address>
+      <tunnel_inside_address>
+        <ip_address>169.254.232.169</ip_address>
+        <network_mask>255.255.255.252</network_mask>
+        <network_cidr>30</network_cidr>
+      </tunnel_inside_address>
+      <bgp>
+        <asn>64512</asn>
+        <hold_time>30</hold_time>
+      </bgp>
+    </vpn_gateway>
+    <ike>
+      <version>ikev1</version>
+      <authentication_protocol>sha1</authentication_protocol>
+      <encryption_protocol>aes-128-cbc</encryption_protocol>
+      <lifetime>28800</lifetime>
+      <perfect_forward_secrecy>group2</perfect_forward_secrecy>
+      <mode>main</mode>
+      <pre_shared_key>M7jhteV8R3pmqU.9tUf_5yxPd.MfzQHY</pre_shared_key>
+    </ike>
+    <ipsec>
+      <protocol>esp</protocol>
+      <authentication_protocol>hmac-sha1-96</authentication_protocol>
+      <encryption_protocol>aes-128-cbc</encryption_protocol>
+      <lifetime>3600</lifetime>
+      <perfect_forward_secrecy>group2</perfect_forward_secrecy>
+      <mode>tunnel</mode>
+      <clear_df_bit>true</clear_df_bit>
+      <fragmentation_before_encryption>true</fragmentation_before_encryption>
+      <tcp_mss_adjustment>1379</tcp_mss_adjustment>
+      <dead_peer_detection>
+        <interval>10</interval>
+        <retries>3</retries>
+      </dead_peer_detection>
+    </ipsec>
+  </ipsec_tunnel>
+</vpn_connection>
